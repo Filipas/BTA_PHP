@@ -1,5 +1,5 @@
 <?php
-
+/*
 $a = [
     'Jonas',
     'Petras',
@@ -45,17 +45,24 @@ for ($i=0; $i < 4; $i++) {
 
 
 '</br>';
+*/
+
 
 $a = [
         [1, 3, 4], 
         [2, 5], 
         [2 => 3, 5 => 8], 
         [1, 1, 5 => 1]
-    ];
+];
 
+$suma = 0;
+$sumaMas = [];
+foreach($a as $key1 => $aa) {
+    foreach($aa as $key2 => $value) {
+        $suma = $suma + $value;
+    }
+    $sumaMas[$key1] = $suma;
     $suma = 0;
-        foreach($a as $key => $value) {
-            $suma += $value[0]; 
 }
 
-echo max($suma); //turi būti array?
+var_dump ($sumaMas);
