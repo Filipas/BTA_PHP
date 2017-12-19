@@ -21,14 +21,9 @@ for ($i=0; $i < 4; $i++) {
     }  
 }
 
+'</br>';
 
-
-/*
-
-
-
-
-<?php
+//Visos poros
 
 $a = [
     'Jonas',
@@ -47,4 +42,20 @@ for ($i=0; $i < 4; $i++) {
         }
     }  
 }
-*/
+
+
+'</br>';
+
+$a = [
+        [1, 3, 4], 
+        [2, 5], 
+        [2 => 3, 5 => 8], 
+        [1, 1, 5 => 1]
+    ];
+
+    $suma = 0;
+        foreach($a as $key => $value) {
+            $suma += $value[0]; 
+}
+
+echo max($suma); //turi būti array?
