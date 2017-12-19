@@ -1,5 +1,5 @@
 <?php
-/*
+
 $a = [
     'Jonas',
     'Petras',
@@ -22,7 +22,7 @@ for ($i=0; $i < 4; $i++) {
 }
 
 '</br>';
-
+/*
 //Visos poros
 
 $a = [
@@ -45,8 +45,8 @@ for ($i=0; $i < 4; $i++) {
 
 
 '</br>';
-*/
 
+*/
 
 $a = [
         [1, 3, 4], 
@@ -66,3 +66,37 @@ foreach($a as $key1 => $aa) {
 }
 
 var_dump ($sumaMas);
+
+
+
+
+'</br>';
+
+$a = [
+        [1, 3, 4], 
+        [2, 5], 
+        [2 => 3, 5 => 8], 
+        [1, 1, 5 => 1]
+];
+
+foreach ($a as $smallerArray) {
+    foreach ($smallerArray as $key => $value) {
+        if (isset($sum[$key])) {
+            $sum[$key] += $value;
+        } else {
+        $sum[$key] = $value;        }
+    }
+}
+
+$ats = echo max($sum);
+
+
+
+/*
+
+if ($sumaMas[0]>$sumaMas[1] && $sumaMas[1]>$suma){
+    echo "Pirmas didžiausias";
+}
+    elseif
+
+    */
