@@ -53,20 +53,28 @@ foreach ($mokiniai as $ind => $arr) {
 // print_r($vidurkiai);
 
 foreach ($vidurkiai as $key => $value) {
-    $vidurkis[][$key] = array_sum($value)/count($value);
+    $vidurkis[$key] = array_sum($value)/count($value);
     // var_dump($value);
 }
 
-for ($i=0; $i < count($vidurkis); $i++) { 
-    $vid = 0;
-    if (array_values($vidurkis[$i])[0] > $vid ) {
-      $vid = array_values($vidurkis[$i])[0];
-    } 
-    
+// var_dump ($vidurkis);
+// for ($i=0; $i < count($vidurkis); $i++) { 
+//     $vid = 0;
+//     if (array_values($vidurkis[$i])[0] > $vid ) {
+//       $vid[] = array_values($vidurkis[$i])[0];
+//     } 
+// }
 
+$reiksme = 0;
+$zmogus = "";
+foreach ($vidurkis as $key => $value) {
+        if ($reiksme < $value) {
+            $reiksme = $value;
+            $zmogus = $key;
+        }
 }
 
-echo $vid;
+var_dump ($reiksme, $zmogus);
 
 // echo round(max(array_values($vidurkis)), 1);
 
