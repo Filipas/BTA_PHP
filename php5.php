@@ -140,6 +140,7 @@ $auto->autoPavadinimas();
 
 
 
+
 class Mokinys 
 {
     public $vardas;
